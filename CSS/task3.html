@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* tbody > tr:first-child{
+      background-color: brown;
+    }
+
+    tbody > tr:nth-child(odd){
+      background-color: lightblue;
+    }
+
+    tbody >  tr:nth-child(even){
+      background-color: lightgreen;
+    } */
+     thead:hover + tbody tr:last-child {
+       /* background-color: yellow; */
+      background-color: tomato;
+     }
+
+  </style>
+  <body>
+    <form method="get">
+      <table border="1px" width="400px" bgcolor="#ddd">
+        <thead>
+          <tr>
+            <td colspan="2" align="center">form demo</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>User name</td>
+            <td><input type="text" name="un" /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="ps" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="email" name="ps" /></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>DOB</td>
+            <td><input type="date" min="2024-02-01" max="2026-01-01" /></td>
+          </tr> 
+
+          <tr>
+            <td colspan="2">
+              <input type="submit" />
+              <input type="reset" />
+              <!-- <input type="button" /> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .container{
+            display: flex;
+            text-align: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .container>*{
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1 1  100% ;
+            font-size: x-large;
+        }
+
+        .container>header {
+            line-height: 100px;
+            background-color: aqua;
+            color: blue;
+        }
+
+        .container>nav {
+            line-height: 30px;
+            background-color: orange;
+            color: blue;
+        }
+
+        @media screen and (min-width:992px) {
+            .mainContent{
+                order: 2;
+                flex: 3 3 0%;
+                /* height: 400px; */
+            }
+
+            .aside1{
+                order: 1;
+                flex: 1 1 0%;
+            }
+
+            .aside2{
+                order: 3;
+                flex: 1 1 0%;
+            }
+
+            .footer{
+                order: 4;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:991px){
+            .mainContent{
+                /* height: 300px; */
+            }
+            .aside1{
+                flex: 1 1 0% ;
+            }
+
+            .aside2{
+                flex: 1 1 0% ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            My header
+        </header>
+        <nav>
+            My navigation 
+        </nav>
+
+        <article class="mainContent">
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod debitis minima placeat tempora odit delectus ipsum ipsa, nesciunt deleniti error eligendi necessitatibus facere asperiores, quam nulla architecto ab blanditiis! Eligendi, sit quibusdam. Possimus voluptatibus consequatur modi libero inventore, alias, tenetur incidunt molestias amet minima soluta, nobis delectus!</p>
+        </article>
+
+        <aside class="aside1">
+            Aside 1
+        </aside>
+        <aside class="aside2">
+            Aside 2
+        </aside>
+
+        <footer class="footer">
+            My Footer
+        </footer>
+
+
+    </div>
+</body>
+</html>

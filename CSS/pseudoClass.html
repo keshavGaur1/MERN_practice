@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #p1::before  {
+            content: "This is before paragraph 1. ";
+            color: red;
+        }
+        #p1::after {
+            content: "This is after paragraph 1. ";
+            color: red;
+        }
+        /* #p1::after {
+            content: "\25ba";
+            color: red;
+        } */
+
+        /* #p2::after {
+            content: url(../html/images/win.png);
+        } */
+
+        /* ul{
+            list-style: none;
+        }
+        li::before{
+            content: "\25ba";
+        } */
+
+        ::marker{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="p1">paragharph 1</p>
+    <p id="p2">paragharph 2</p>
+    <p id="p3">paragharph 3</p>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    
+</body>
+</html>

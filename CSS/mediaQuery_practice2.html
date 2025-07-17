@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: none  ;
+        }
+        @media screen and (max-width: 576px) {
+            body {
+                background-color: lightblue;
+            }
+            #i5 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 577px) and (max-width: 767px) {
+            body {
+                background-color: red;
+                
+            }
+            #i4 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            body {
+                background-color: yellow;
+            }
+            #i3 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            body {
+                background-color: blue;
+            }
+           #i2 {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: lightcoral;
+            }
+            #i1 {
+                display: block;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 id="i1">extra large device</h1>
+    <h1 id="i2">large device</h1>
+    <h1 id="i3">medium device</h1>
+    <h1 id="i4">small device</h1>
+    <h1 id="i5">extra small device</h1>
+</body>
+</html>

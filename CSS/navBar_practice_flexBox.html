@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      .myNav {
+        background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+      }
+      .myNav > img {
+        height: 70px;
+      }
+      .myNav > ul {
+        list-style-type: none;
+        margin: 0;
+        width: 40%;
+        /* height: 100%; */
+        padding: 0;
+        display: flex;
+        background-color: blue;
+        justify-content: space-around;
+      }
+      .myNav > ul > li > a {
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+      }
+      /* .myNav > ul > li{
+
+      } */
+
+      @media screen and(min-width:768px) and (max-width: 1200px) {
+        .myNav{
+            flex-direction: column;
+        }
+        
+        .myNav>ul{
+            flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body bgcolor="black">
+    <nav class="myNav">
+      <img src="../html/images/win.png" alt="" />
+      <ul>
+        <li>
+          <a href="#">link 1</a>
+        </li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+        <li><a href="#">link 4</a></li>
+
+        <li>
+          <a href="#">link 5</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
