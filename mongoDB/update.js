@@ -114,6 +114,8 @@ db.Students_data.updateOne({ stuName:{$eq:"abhi"}} ,
 */
 
 
+
+
 /*
 task - ek nayi field (bio)  add karna hai kuch records mai
 db.Students_data.updateMany(
@@ -121,6 +123,7 @@ db.Students_data.updateMany(
     { $set: {'bio' : 'i am btech student' } }
 )
 */
+
 
 
 
@@ -168,7 +171,25 @@ ab BTECH aur btech same consider hoga
 
 /*
 
+jo bhi stuName s se start ho ( ^ represents starting)
+db.Students_data.find(
+ { stuName : /^s/i }
+)
 
+jo bhi stuName s se end ho ( $ represents ending)
+db.Students_data.find(
+ { stuName : /s$/i }
+)
+
+third character s ho , usse phele koi bhi 2 characters ho sakte hai
+db.Students_data.find(
+ { stuName : /^.{2}s/i }
+)
+
+last se second character t ho. end character koi bhi ho sakta
+db.Students_data.find(
+ { stuName : /t.{1}$/i }
+)
 
 */
 
@@ -177,12 +198,16 @@ ab BTECH aur btech same consider hoga
 
 // ------------------------------------------------------------------------------------------------------------------------
 
+/*
+
+delete - 
+
 deleteOne() - update 1 document
 deleteMany() - delete more than 1 document
 
 symtax - db.Students_data.deleteOne( {<filter>} )
 
-
+*/
 
 
 
