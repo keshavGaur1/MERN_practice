@@ -1,0 +1,26 @@
+strictly type language - 
+
+
+
+-----------------------------------------------------------------------------------------
+java script in dynamically typed language -
+
+matlab variable ko jo bhi value assign krege to variable ka data type whi value ke according change ho jayega
+
+let a = 5 
+let a = 'abc'
+
+
+
+--------------------------------------------------------------------------------------------
+javascript - interprete and compilar dono language hai
+
+
+
+--------------------------------------------------------------------------------------------
+
+types - uninary , binary , ternary 
+
+uninary - 1 operand ke sath
+binary - 2 operand ke sath
+ternary - conditional 
