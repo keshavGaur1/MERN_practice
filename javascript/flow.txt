@@ -4,6 +4,12 @@ introduction.txt
 variableDeclaration.html
 datatypes.html
 
+restParameter.html 
+function.html
+nestedFunc.html  (iske ander closure )
+
+string.html
+
 
 
 

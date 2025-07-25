@@ -24,3 +24,172 @@ types - uninary , binary , ternary
 uninary - 1 operand ke sath
 binary - 2 operand ke sath
 ternary - conditional 
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+simple if-else - ek condition true hone par kuch kaam karna ho, aur agar wo galat (false) ho to kuch aur karna ho
+
+nested if-else - ander ki conditions bhar ki (outer) conditions per depended ho
+
+if-else ladder - agar condition 1 se jyada ho aur har condition ke sath alg alg piece of code execute krana ho 
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+loop - initialization , condition , increment 
+
+while - pre-condition / entry control  ( phele condition check hogi fir loop ke ander jayege , har iteration ke liye) .
+
+do while - post conditional ( exit control )
+
+for - pre-condition 
+
+
+jaha no of iteration phele se pata hota hai waha for 
+
+jaha no of iteration phele se nhi pata hote hai waha while 
+
+do while - hmesha menu driven code mai use hota . ( ex - atm machine mai user 4 option select krega , koi nhi krega to exit )
+
+
+--------------------------------------------------------------------------------------------
+
+js mai -
+
+a) for of loop - kisi data structure ke same elements access krne ke liye
+
+let arr= [1,2,3,4,5] ;
+for (let ele of arr ) {
+    console.log(ele);
+}
+
+// ans - 1 , 2 , 3 , 4 , 5
+
+
+note - agar array mai null hai to bhi null print kr dega . at the end null ka type bhi object hai.
+
+
+let data = {
+    name : "keshav" ,
+    age:20 ,
+}
+
+for ( let ele of data ) {
+    console.log(ele);   
+}
+
+// error - data is not iterable 
+
+note - for of loop / iterator  kewal sequence data structures per use ho sakta
+
+ques - to objects ko kaise iterate kre ???
+
+
+b) for in loop - it is used to iterate object 
+
+
+let data = {
+    name : "keshav" ,
+    age:20 ,
+}
+
+for ( let ele in data ) {
+    console.log(ele);   
+}
+
+// ans - name  ,  age 
+
+
+matlab for in loop object ki keys return krega. ( ab key se value ko access kr sakte )
+
+
+use of for in loop on array  - 
+
+
+let arr= [1,2,3,4,5] ;
+for (let ele of arr ) {
+    console.log(ele);
+}
+
+// ans - 0,1,2,3,4
+
+for in loop se array ki indexes print hoti hai
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+note -  agar ham undefined per koi bhi operation perform krege to uska ans hmesha NaN hoga
+
+undefined + undefined = NaN
+
+undefined/1 = NaN
+
+
+function cal_interest(amt , rate , time ){
+    return ( amt * rate * time ) / 100 ;
+}
+
+console.log(cal_interest() )  // NaN
+
+why - amt , rate , time mai koi value as a parameter nhi bheji gyi to inki default value undefined hai
+
+ab return statement mai amt , rate , time per operation perform kre gye hai aur ye undefined hai to ans NaN hoga
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+default value argument - 
+
+function cal_interest(amt , rate , time=1 ){
+    return ( amt * rate * time ) / 100 ;
+}
+
+cal_interest( 500 , 5 ) 
+
+
+time = 1 kya hai ?? default value of argument 
+
+
+agar we call 
+cal_interest( 500 , 5 , 10 ) to 10 time=1 ko override kr dega 
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

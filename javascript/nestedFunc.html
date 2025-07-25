@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+
+        scope of functions in nested structure 
+
+        function outerfun(){
+            let a = [1,2,3];
+                console.log("Outer fun");
+
+            function innerfun(){
+                console.log("Inner fun");    
+            }
+
+            innerfun();
+        }
+
+        outerfun()  // Outer function
+
+        // inner function ko direct use nhi kr sakte
+        innerfun()  // error - Uncaught ReferenceError: innerfun is not defined
+
+        */
+
+        // -----------------------------------------------------------------------------------------
+
+        /*
+
+        // access function outside - 
+
+        function outerfun(){
+            let a = [1,2,3];
+            console.log("Outer fun");
+
+            function innerfun(){
+                console.log("Inner fun");    
+            }
+
+            return innerfun
+        }
+
+        let fn = outerfun()  // store the reference of innerfun
+        console.log(fn);  
+        fn();
+
+        
+        */
+
+
+// ---------------------------------------------------------------------------------------------------
+
+        /*
+
+        Closure --- 
+
+        Ek function jo apne baahar ke scope ke variables ko yaad rakhta hai, chahe wo outer function kab ka khatam ho chuka ho. 
+        closure is a function that remembers the variables from its outer scope , even after that outer function has finished computing . 
+
+
+
+        function outerfun(name){
+            let a = [1,2,3];
+            console.log("Outer fun");
+
+            function innerfun(msg){
+                console.log("Inner fun");
+                console.log(name,msg)    
+            }
+
+            return innerfun
+        }
+
+        let fn = outerfun("vansh")  // Outer function
+        console.log(fn);  
+        fn("chala gya..");  // vansh chala gya..
+
+        
+        */
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

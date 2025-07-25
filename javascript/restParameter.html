@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function mySum( a,b,...c){
+            return (a+b+c);
+        }
+
+        console.log(mySum(1,2,3,4,5)) ;
+
+
+        
+        function mySum2( ...c){
+            let sum=0;
+
+            for(let ele of c ) sum+=c ;
+
+            return sum;
+        }
+
+        console.log(mySum2(1,2,3,4,5)) ;
+
+        /*
+        
+        ...c is rest parameter 
+
+        agar a,b ke alawa koi aur parameters hoge to wo sara  rest parameter mai chala jayega
+
+
+        type of rest parameter - array 
+
+
+        agar ham 
+        function mySum( ...c , a , b ) kre to 
+
+        error - Rest parameter must be last formal parameter  
+
+        rest parameter hmesha last mai likhege
+
+
+        
+        */
+
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

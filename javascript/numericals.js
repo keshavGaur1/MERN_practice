@@ -73,6 +73,54 @@ console.log( "5" + true )
 --------------------------------------------------------------------------------------------
 
 
+        let result ;
+
+        result = 1,2,3;
+        console.log(result);  // 1
+
+        // = ki precedance , se jyada hoti .  to phele result = 1 evaluate hua aur bas code khtm so ans is 1
+
+        result = (1,2,3);
+        console.log(result);  // 3 
+
+        // () ki precedance = se jyada hoti. to phele (1,2,3) evaluate hoga aur iski value 3 hogi . fir assignment operator se result=3
+
+
+        , - lowest precedance
+        assignment operators - 2nd lowest precedance
+
+
+
+
+        for(let a=1,b=10 ; b>10 , a<=5 ; a++ , b-- ){
+            console.log("A: "+a, "B: " + b);
+        }
+
+
+        yaha kewal a<=5 wali condition hi check hogi kewal (b>10 se koi matlab nhi )
+        
+        why ?? - waha b>10 , a<=5   likha hai
+
+        ab , ki precedance sabse kam hoti to -
+
+        phele b>10 use hua . fir a<=5 expression use hua 
+        ab , execute hoga . per hmara expression kewal a<=5 hai
+        
+        to condition kewal a<=5 per hi chlegi
+
+
+
+
+        
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 

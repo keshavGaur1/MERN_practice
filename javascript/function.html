@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        /*
+
+        function myFun (){
+            console.log("func calling ")
+        }
+
+        console.log(myFun)  // pura function as it is 
+        console.log(typeof myFun)  // function 
+
+        // typeof myFun function hi hoga
+
+        // myFun per kewal function ka reference hai
+        // myFun() krne se iss reference ka code execute hoga
+
+        */
+        
+
+// --------------------------------------------------------------------------------------
+        /*
+
+        javascript mai function - first class citizens 
+
+        
+        
+        */
+
+
+// ------------------------------------------------------------------------------------------------
+        /*
+        anonymous function - 3 types 
+
+        */
+
+
+        /*
+
+        // anonymous function - function without name 
+
+        type 1 - IIFE  
+
+        // use - jis func ko kewal ek hi baar execute krna ho . 
+
+        function (){
+            console.log("anonymous function");
+        }
+
+        // how to call anonymous function -
+
+        (function (){
+            console.log("anonymous function");
+        })();
+
+        //  ise IIFE - imediately invoke function expression kehte hai . matlab function bante hi use call .
+        // func ke bhar {} lagake use as a expression bana dete h 
+
+        
+        */
+
+        // -----------------------------------------------------------------------------------------
+
+        /*
+
+            let ans = (function (num){
+                return num**2;
+            })(6);
+
+            console.log(ans)  // 36
+        
+        
+        */
+
+// -------------------------------------------------------------------------------------------
+
+        /*
+
+        type 2 of anonymous func - store it into variable 
+
+        const fn = function (){
+            console.log("anonymous function");
+        }
+
+        fn()
+        
+        */
+
+
+// -------------------------------------------------------------------------------------------
+
+
+        /*
+
+        type 3 of anonymous func - arrow func
+        
+        Arrow function -
+
+        const fn = (num) => num**2
+
+        let ans = fn(6)
+        console.log(ans);
+        
+
+        note - arrow function ki value khud se return ho jati
+        
+        
+        */
+
+
+        /*
+
+        const fn =  (num) => { num**2  } 
+
+        let ans = fn(6)
+        console.log(ans);  // undefined 
+
+
+        isme { } lagane ki wajh se automatically return nhi hoga.  
+
+        return krane ke liye - return likhna pdega
+
+        
+        const fn =  (num) => { return num**2  } 
+
+        let ans = fn(6)
+        console.log(ans);
+
+        */
+
+
+        
+        /*
+
+        ex program of arrow func - 
+
+        const fn =  (amt , rate , time=1 ) =>  (amt*rate*time)/100 ;
+
+        let ans = fn(5000,10)
+        console.log(ans);
+        
+        
+        
+        */
+
+
+
+// -------------------------------------------------------------------------------------------
+
+
+
+
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
