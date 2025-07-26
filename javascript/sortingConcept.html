@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    
+
+// sort the data 1- based on uid , 2- based on unm , 3- based on age
+
+    /*  
+
+    code 1 - 
+    let userData = [
+    { uid: 1004, unm: "sachin", age: 55 },
+    { uid: 1002, unm: "zaheer", age: 45 },
+    { uid: 1003, unm: "rahul", age: 48 },
+    { uid: 1005, unm: "kaif", age: 43 },
+    ];
+
+    userData.sort((a, b) => {
+    return a.uid - b.uid;
+    });
+
+    console.log(userData);
+
+
+    userData.sort((a, b) => {
+    return a.unm.localeCompare(b.unm.localeCompare) ;   
+    });
+
+    console.log(userData);
+
+    userData.sort((a, b) => {
+    return a.age - b.age;
+    });
+
+    console.log(userData);
+
+
+
+
+    output - kewal age ke basis per hi sort hoga aur teeno console log mai age ke basis per sort se hi ans ayega
+
+
+    */
+
+    //---------------------------------------------------------------------------------------------
+
+    /*
+
+    solution of above problem -  real object mai change krne ki jagah uski copy mai change kro
+
+    
+    let userData = [
+    { uid: 1004, unm: "sachin", age: 55 },
+    { uid: 1002, unm: "zaheer", age: 45 },
+    { uid: 1003, unm: "rahul", age: 48 },
+    { uid: 1005, unm: "kaif", age: 43 },
+    ];
+
+    let r = [...userData].sort((a, b) => {
+    return a.uid - b.uid;
+    });
+
+    console.log(r);
+
+
+    r = [...userData].sort((a, b) => {
+    return a.unm.localeCompare(b.unm) ;   
+    });
+
+    console.log(r);
+
+    r = [...userData].sort((a, b) => {
+    return a.age - b.age;
+    });
+
+    console.log(r);
+
+
+
+    ab shi ans ayega teeno ke basis per sort hoke
+    
+    */
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+        
+        forEach loop - array ke elements ko ek ek krke access krne ke liye
+
+        return type of forEach loop - undefined
+        
+        */
+
+        // ------------------------------------------------------------------------------
+
+        /*
+
+
+        let arr = [100, 200, 300, 400 ,500];
+
+
+        function myCallBack(ele) {
+            console.log(ele);
+            
+        }
+
+        // JavaScript ke forEach ke andar hamesha ek callback function hi likhna padta hai.
+        // forEach mai callback likhte time kabhi bracket nhi lagate hai
+
+        arr.forEach(myCallBack) ; 
+        // forEach ne myCallBack ko call kra to 100,200,300 .... aise value callback function mai pass krta hai forEach
+        // callback ki value bhi return hoke forEach per aati
+
+
+        // return value hmesa calling enviroment variable ko milti hai
+
+        /*
+
+        output -
+        100
+        200
+        300
+        400
+        500
+
+        */
+
+        // -------------------------------------------------------------------------------------------------------------------------
+           
+        /*
+        let arr = [100, 200, 300, 400 ,500];
+
+
+        function myCallBack(ele) {
+            console.log(ele);
+            
+        }
+
+        arr.forEach(myCallBack()) ; 
+
+        /*
+
+        output -
+
+        error - TypeError: undefined is not a function
+
+        */
+
+        /*
+        reason ??? - 
+
+        arr.forEach(myCallBack(5)) ; mai myCallBack() function call hua phele to uski value 5 print hogyi --
+
+        aur fir iss myCallBack() function call ne undefined return kra hoga aur undefined value forEach function ke pass aayi
+
+        matlab -- 
+
+        arr.forEach(myCallBack(5)) convert into arr.forEach(undefined) 
+
+        tabhi error aarhiundefined hai kyoki forEach ke ander
+
+
+        */
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

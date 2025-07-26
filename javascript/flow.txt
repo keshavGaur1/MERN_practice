@@ -9,7 +9,18 @@ function.html
 nestedFunc.html  (iske ander closure )
 
 string.html
+array.html
 
+forEach_and_callback.html
+assignment1.js
+filter.js
+assignment2.js
+map.js
+sort.js
+sortingConcept.html
+
+reduce.js
+assignment3.js
 
 
 
