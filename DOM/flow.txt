@@ -1,0 +1,17 @@
+intro.txt
+
+elementSelection_changeHTML.html
+CSSchange_usingJS.html
+
+handlingClassesUsingjs.js
+changingAndApplyingClasses.html
+addEventListener.html     // dynamically event ko handle krne ke liye .
+accessValueofInput.html 
+
+practice1.html - password dekhne ke liye -> show password , password hide krne ke liye -> hide password
+practice2.html - eye icon lagaya . ab show password mai icon eye open aur hide password mai eye close 
+
+dynamicTagCreation.html
+dynamicTag.js // notes
+dynamicInput.html   // button click hone per new input field when we click on button
+dynamicTable.html

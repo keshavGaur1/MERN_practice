@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+    </script>
+
+</head>
+<body>
+
+    <input type="password" id="pwd" placeholder="eg : abc@123 ">
+    
+    
+    <button type="button" id="myBtn">  show </button>
+
+    <script >
+        function myFun () {
+            const ele = document.getElementById('pwd');
+
+            ele.type = (ele.type === 'password') ? "text" : "password" ;
+
+            // logic 1
+            // btn.textContent = (ele.type === 'password') ? "show pass" : " hide password" ;
+
+            // logic 2
+            btn.textContent = (btn.textContent.trim() === 'show') ? 'hide':'show' ;
+            
+        }
+
+        const btn = document.getElementById('myBtn') ;
+        
+        btn.addEventListener('click' , myFun )
+        
+    </script>
+</body>
+</html>

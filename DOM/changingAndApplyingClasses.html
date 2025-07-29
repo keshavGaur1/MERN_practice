@@ -1,0 +1,52 @@
+<!-- 
+
+ class ko replace krna
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .clsA {
+            background-color: aqua;
+            color: aliceblue;
+        }
+        .clsB {
+            text-align: center;
+            padding: 20px;
+        }
+        .clsC {
+            background-color: yellow;
+        }
+    </style>
+
+    <script >
+           
+        function myFun(){
+            
+           const ele = document.getElementById('myH');
+           console.log(ele);
+
+           const lst = ele.classList;
+
+           lst.replace('clsA' , 'clsC')
+
+           console.log(lst)
+        }
+
+        
+    </script>
+
+</head>
+<body>
+    <h1 id="myH" class="clsA"> Heading 1 </h1>
+
+    
+    <button type="button" onclick="myFun()" >Button </button>
+</body>
+</html>

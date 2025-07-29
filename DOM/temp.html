@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/70d41d62a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script></script>
+  </head>
+  <body>
+
+    <button id="myBtn">Button 1</button>
+
+
+    </div>
+
+
+    
+    <script>
+
+        const btn = document.getElementById("myBtn");
+
+        btn.addEventListener("click", () => {
+
+            const myTab = document.createElement('table');
+            myTab.setAttribute('border','2px')
+
+            let row = myTab.insertRow();
+
+            let col1 = row.insertCell();
+            col1.textContent = " column 1 ";
+
+            let col2 = row.insertCell();
+            let inputEle1= document.createElement('input');
+            inputEle1.setAttribute('type','text');
+            col2.append(inputEle1);
+
+
+            let col3 = row.insertCell();
+            col3.textContent = " column 3 ";
+
+            console.log(myTab);
+            document.body.append(myTab);
+
+            
+            
+      });
+
+
+
+
+
+
+
+
+
+    /*
+      const btn = document.getElementById("myBtn");
+
+      btn.addEventListener("click", () => {
+        const myH = document.createElement("h1");
+        // console.log(myH);
+        myH.textContent = "my first dynamic content";
+        myH.style.backgroundColor = "red";
+        console.log(myH);
+
+        // document.body.append(myH);
+        document.body.prepend(myH);
+      });
+      */
+    </script>
+  </body>
+</html>

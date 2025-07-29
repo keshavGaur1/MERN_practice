@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/70d41d62a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function myFun() {
+        const ele = document.getElementById("pwd");
+
+        ele.type = ele.type === "password" ? "text" : "password";
+
+        const btn = document.getElementById("myBtn");
+        let lst = btn.classList;
+
+        if (lst.contains("fa-eye")) {
+          lst.replace("fa-eye", "fa-eye-slash");
+        } else {
+          lst.replace("fa-eye-slash", "fa-eye");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="password" id="pwd" placeholder="eg : abc@123 " />
+
+    <!-- <i class="fa-solid fa-eye"></i> -->
+    <button
+      type="button"
+      id="myBtn"
+      class="fa-solid fa-eye"
+    ></button>
+
+    <script>
+      const btn = document.getElementById("myBtn");
+
+      btn.addEventListener("click", myFun);
+    </script>
+  </body>
+</html>

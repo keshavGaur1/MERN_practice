@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/70d41d62a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script></script>
+  </head>
+  <body>
+
+    <button id="myBtn2">Button 2</button>
+
+    <div id="div1" style="border : 1px solid red ">
+
+        
+
+    </div>
+
+
+    
+    <script>
+
+        const btn2 = document.getElementById("myBtn2");
+
+        btn2.addEventListener("click", () => {
+            const input1= document.createElement('input');
+            input1.setAttribute('type','text');
+            input1.setAttribute('name','nm');
+            input1.setAttribute('placeholder','enter you name');
+            console.log(input1);
+            
+            const div1 = document.getElementById("div1");
+            div1.append(input1);
+
+            
+      });
+
+
+    </script>
+  </body>
+</html>

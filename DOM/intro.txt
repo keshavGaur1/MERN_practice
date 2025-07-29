@@ -1,0 +1,27 @@
+DOM -   DOM is an api created by browser for manipulating HTML document
+
+browser html document ka ek tree maintain krta hai
+root node -> document than html 
+
+jab kisi html element mai change krte hai to uska matlab iss tree mai traversal kr rhe hai
+
+DOM represent html document as a tree of node and provide function to allow you add , remove , modify parts of document effectively
+
+DOM is cross platform (platform independent) and language independent ways of manipulating HTML & XML documents
+
+----------------------------------------------------------------------------------------------------------------
+
+js code ko write krne se baad execute krane ke liye -- js engine or v8 engine
+
+----------------------------------------------------------------------------------------------------------------
+
+difference between innerHTML , innerText and textContent 
+
+| Property      | Kya deta hai                   | Hidden cheeze deta? | Tags deta? |
+| ------------- | ------------------------------ | ------------------- | ---------- |
+| `innerText`   | Dikhne wala text               | ❌ Nahi deta         | ❌ Nahi     |
+| `innerHTML`   | HTML + text dono               | ✅ Deta hai          | ✅ Haan     |
+| `textContent` | Plain text (dikh ho ya chhupa) | ✅ Deta hai          | ❌ Nahi     |
+
+----------------------------------------------------------------------------------------------------------------
+
