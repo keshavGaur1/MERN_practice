@@ -26,13 +26,10 @@
         // given data
         let userData = [
           {uid:1004 , unm:'sachin' , age:55 , gender:"male" , dept:"CSE"},
-          {uid:1002 , unm:'zaheer' , age:65 , gender:"male" , dept:"ME"},
+          {uid:1002 , unm:'zaheer' , age:45 , gender:"male" , dept:"CSE"},
           {uid:1003 , unm:'rahul' , age:48 , gender:"male" , dept:"CSE"},
-          {uid:1001 , unm:'sachin' , age:43 , gender:"male" , dept:"EC"},
+          {uid:1001 , unm:'sachin' , age:43 , gender:"male" , dept:"CSE"},
         ]
-
-        sortCols = {} ;  // batayega cols ko kaise sort kre - 
-        // ( key:false - descending order ) ( key:true - ascending order )
 
         //  function to create table
         function createTable(data){
@@ -46,40 +43,13 @@
           const thead = document.createElement('thead');
           const row_Head = thead.insertRow();
 
-          const keys = Object.keys(data[0]);  // userData[0] ki sari keys
+          const keys = Object.keys(userData[0]);  // userData[0] ki sari keys
           console.log(keys);  // uid , unm , age
           
           // inserting every keys as a heading of table  
           keys.forEach( (key) => {
             let col_Head = document.createElement('th');
             col_Head.textContent = key.toUpperCase();
-
-            col_Head.style.backgroundColor = 'aqua' ;
-            col_Head.style.cursor = 'pointer' ;
-
-              // iss column heading per click krne per - 
-              col_Head.addEventListener('click' , () => {
-
-                sortCols[key] = ! sortCols[key] ;
-                // initial sortCols[key] object is empty matlab false value -- ab iska ! matlab true value { key:true } {uid:true}
-                // agar sortCols[key] mai key hai {uid:true} to use false kr rhe ! se {uid:false}
-
-                const sortedArray = [...userData].sort( (a,b) => {
-                  if( typeof(a[key]) === 'number' ){
-                    return sortCols[key] ? a[key] - b[key] : b[key] - a[key] ;
-                  }
-                  else if( typeof(a[key]) === 'string' ) {
-                    return sortCols[key] ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]) ;
-                  }
-                })
-                console.log(sortedArray);
-                
-                const sortedTable = createTable(sortedArray);
-                const tabContainer = document.getElementById('tabContainer');
-                tabContainer.innerHTML="";
-                tabContainer.append(sortedTable);
-
-              })
 
             row_Head.append(col_Head);
           })
@@ -94,7 +64,7 @@
           const tbody = document.createElement('tbody');
           
           // sare user ko ek ek krke layege
-          data.forEach((user)=>{
+          userData.forEach((user)=>{
             let row = myTab.insertRow();
             const values = Object.values(user);  // user ki sari key ki values aagyi
 
@@ -107,6 +77,8 @@
           })
 
           myTab.append(tbody);
+
+          // console.log(myTab);
 
           return myTab;
         }

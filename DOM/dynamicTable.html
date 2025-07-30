@@ -18,7 +18,6 @@
 
     </div>
 
-
     
     <script>
 
@@ -26,8 +25,8 @@
 
         btn.addEventListener("click", () => {
 
-            const myTab = document.createElement('table');
-            myTab.setAttribute('border','2px')
+            const myTab = document.createElement('table');  // creating table
+            myTab.setAttribute('border','2px');
 
             let row = myTab.insertRow();
 
@@ -48,6 +47,23 @@
             
             
       });
+
+      /*
+      
+      table banane ke liye - 
+      const myTab = document.createElement('table');
+      
+      table mai kuch style add krne ke liye -
+      myTab.setAttribute('border','2px')
+
+      row insert krne ke liye - 
+      let row = myTab.insertRow();
+
+      col insert krne ke liye
+      let col1 = row.insertCell();
+
+      */ 
+
 
     </script>
   </body>

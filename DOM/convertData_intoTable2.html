@@ -31,9 +31,6 @@
           {uid:1001 , unm:'sachin' , age:43 , gender:"male" , dept:"EC"},
         ]
 
-        sortCols = {} ;  // batayega cols ko kaise sort kre - 
-        // ( key:false - descending order ) ( key:true - ascending order )
-
         //  function to create table
         function createTable(data){
           const myTab = document.createElement('table');
@@ -59,17 +56,12 @@
 
               // iss column heading per click krne per - 
               col_Head.addEventListener('click' , () => {
-
-                sortCols[key] = ! sortCols[key] ;
-                // initial sortCols[key] object is empty matlab false value -- ab iska ! matlab true value { key:true } {uid:true}
-                // agar sortCols[key] mai key hai {uid:true} to use false kr rhe ! se {uid:false}
-
                 const sortedArray = [...userData].sort( (a,b) => {
                   if( typeof(a[key]) === 'number' ){
-                    return sortCols[key] ? a[key] - b[key] : b[key] - a[key] ;
+                    return a[key] - b[key] ;
                   }
                   else if( typeof(a[key]) === 'string' ) {
-                    return sortCols[key] ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]) ;
+                    return a[key].localeCompare(b[key]);
                   }
                 })
                 console.log(sortedArray);

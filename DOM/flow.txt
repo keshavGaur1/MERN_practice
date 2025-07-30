@@ -14,4 +14,10 @@ practice2.html - eye icon lagaya . ab show password mai icon eye open aur hide p
 dynamicTagCreation.html
 dynamicTag.js // notes
 dynamicInput.html   // button click hone per new input field when we click on button
-dynamicTable.html
+dynamicTable.html  // dynamic Table kaise banaye
+
+convertData_intoTable.html   // given an array of objects. add all data in a table format.
+convertData_intoTable2.html  // table ke kisi column per click kro to table uske according sort ho jaye
+convertData_intoTable3.html  // table mai kisi column per - 1 baar click - ascending order mai sort 
+                                                            2 baar click - descending order mai sort
+
