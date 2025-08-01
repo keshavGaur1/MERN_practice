@@ -11,3 +11,57 @@ Node js is single threaded environment but highly scalable
 node js is very fast as it runs on v8 engine
 
 No buffering - node js application never buffer any data . they simply output the data in chunks
+
+REPL - read evaluate print loop
+
+// ------------------------------------------------------------------------------------------------------------------
+
+in shell -  
+
+shell is called as REPL 
+
+_ -> _ represents the result of previously solved expression
+
+( last time jo expression ka result hoga wo _ mai save ho jayega )
+
+
+how to print loop in shell
+
+for(let i=1;i<10;i++)
+... {
+... console.log('inside loop')
+... console.log(i)
+... }
+
+har step ke baad enter press krege
+
+// ------------------------------------------------------------------------------------------------------------------
+
+.editor  - isse shell editor mode mai aa jayega  ( ctrl+D to run and ctrl+c for cancle)
+
+.break - immediate exit ke liye
+
+.exit - direct shell se exit krne ke liye ( isse initial state per pauch jayege cmd ke )
+
+.save file_name  - jo bhi data hai current session of shell ka use save krne ke liye 
+
+.load file_location - jo bhi code save kra hai .save use krke uss session ke variable ko again access krne ke liye iss session mai
+
+// ------------------------------------------------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------------------------------------------------------------
+
+run js file using node - 
+node fileName.js
+
+
+
+
+
+
+
+
+
+
+
