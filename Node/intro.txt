@@ -1,0 +1,13 @@
+Node js - server side run time environment built on chrome's js engine (v8 engine)
+
+Node js is cross platform , backend js env that runs js code outside web browser
+
+node js is asynchronous and event driven
+
+asynchronous - non blocking codes 
+
+Node js is single threaded environment but highly scalable 
+
+node js is very fast as it runs on v8 engine
+
+No buffering - node js application never buffer any data . they simply output the data in chunks
