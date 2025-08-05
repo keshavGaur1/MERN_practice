@@ -13,113 +13,35 @@
   </head>
   <body>
 
-    <!-- button press krne per table aayegi  -->
-    <button id="myBtn">Button 1</button>   
+    <div ></div>
 
-    <!-- table ko iss container mai append kr dege -->
-    <div id="tabContainer"></div>
+    <h1>1Heading</h1>
+    <h1>2Heading</h1>
+    <h1>3Heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus laborum hic totam aspernatur natus.</p>
+    <h1>4Heading</h1>
 
+    <button id="myBtn">Button</button> 
+
+    
 
     
     <script>
 
-        // given data
-        let userData = [
-          {uid:1004 , unm:'sachin' , age:55 , gender:"male" , dept:"CSE"},
-          {uid:1002 , unm:'zaheer' , age:65 , gender:"male" , dept:"ME"},
-          {uid:1003 , unm:'rahul' , age:48 , gender:"male" , dept:"CSE"},
-          {uid:1001 , unm:'sachin' , age:43 , gender:"male" , dept:"EC"},
-        ]
-
-        sortCols = {} ;  // batayega cols ko kaise sort kre - 
-        // ( key:false - descending order ) ( key:true - ascending order )
-
-        //  function to create table
-        function createTable(data){
-          const myTab = document.createElement('table');
-          myTab.setAttribute('border','2px');
-          myTab.setAttribute('width','500px');
-          myTab.setAttribute('align','center');
-          myTab.setAttribute('bgcolor','#ddd');
-          
-          // creating head and insert row in head
-          const thead = document.createElement('thead');
-          const row_Head = thead.insertRow();
-
-          const keys = Object.keys(data[0]);  // userData[0] ki sari keys
-          console.log(keys);  // uid , unm , age
-          
-          // inserting every keys as a heading of table  
-          keys.forEach( (key) => {
-            let col_Head = document.createElement('th');
-            col_Head.textContent = key.toUpperCase();
-
-            col_Head.style.backgroundColor = 'aqua' ;
-            col_Head.style.cursor = 'pointer' ;
-
-              // iss column heading per click krne per - 
-              col_Head.addEventListener('click' , () => {
-
-                sortCols[key] = ! sortCols[key] ;
-                // initial sortCols[key] object is empty matlab false value -- ab iska ! matlab true value { key:true } {uid:true}
-                // agar sortCols[key] mai key hai {uid:true} to use false kr rhe ! se {uid:false}
-
-                const sortedArray = [...userData].sort( (a,b) => {
-                  if( typeof(a[key]) === 'number' ){
-                    return sortCols[key] ? a[key] - b[key] : b[key] - a[key] ;
-                  }
-                  else if( typeof(a[key]) === 'string' ) {
-                    return sortCols[key] ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]) ;
-                  }
-                })
-                console.log(sortedArray);
-                
-                const sortedTable = createTable(sortedArray);
-                const tabContainer = document.getElementById('tabContainer');
-                tabContainer.innerHTML="";
-                tabContainer.append(sortedTable);
-
-              })
-
-            row_Head.append(col_Head);
-          })
-          
-          myTab.append(thead);  // thead table mai daal diya
-
-
-          // now 1st row (heading row) ka kaam hogya
-
-          // inserting rows in tbody
-
-          const tbody = document.createElement('tbody');
-          
-          // sare user ko ek ek krke layege
-          data.forEach((user)=>{
-            let row = myTab.insertRow();
-            const values = Object.values(user);  // user ki sari key ki values aagyi
-
-            values.forEach((val) => {  // har value ko column mai daalege 
-              let col = row.insertCell();
-              col.textContent = val ;
-            })
-
-            tbody.append(row);
-          })
-
-          myTab.append(tbody);
-
-          return myTab;
-        }
-
-
-        //  button click krne per
         const btn = document.getElementById("myBtn");
         btn.addEventListener('click' , () => {
-          const tabContainer = document.getElementById('tabContainer');
-          const table = createTable(userData); // createTable se puri table ban ke ayegi
-          tabContainer.append(table);
+
+          // let h1List = document.getElementsByTagName('h1')
+          // console.log(h1List);
+
+          const h1 = document.querySelector('p+h1');
+          console.log(h1);
+          
+          
+          
         })
 
+        
     </script>
   </body>
 </html>

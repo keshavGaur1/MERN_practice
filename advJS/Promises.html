@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      const promise =  new Promise((resolve,reject) => {
+        
+        let isValid = false;
+        if(isValid){
+             resolve("Data Received...");
+        }
+        else{
+         reject("Error Occured...");
+        }
+
+
+        })
+
+        promise.then((data)=>{  // then mai resolve wala function chlega
+            console.log(data); 
+        }).catch((err)=>{  // error mai reject wala function chlega
+            console.log(err);
+        }).finally(()=>{
+            console.log("finally...")
+        })
+
+    console.log(promise)
+
+
+    /*
+
+    use of promise - handle asynchronous code with callbacks  ( matlb ye js ke main thread mai work nhi krta )
+
+    promise is an js object . 
+
+    promise ki 3 states - pending , resolved , rejected
+
+    resolved - then mai 
+    rejected - catch block mai (in case of any problem)
+    
+    */
+
+
+
+      
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

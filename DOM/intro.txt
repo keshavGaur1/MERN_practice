@@ -23,5 +23,6 @@ difference between innerHTML , innerText and textContent
 | `innerHTML`   | HTML + text dono               | ✅ Deta hai          | ✅ Haan     |
 | `textContent` | Plain text (dikh ho ya chhupa) | ✅ Deta hai          | ❌ Nahi     |
 
+innerText kewal whi dega jo content html page mai present hai
 ----------------------------------------------------------------------------------------------------------------
 

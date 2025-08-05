@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      let userData = [
+        { uid: 1001, unm: 'Sachin', age: 55, gender: 'Male', dept: "CSE" },
+        { uid: 1002, unm: 'Zaheer', age: 45, gender: 'Male', dept: "ME" },
+        { uid: 1003, unm: 'Rahul', age: 48, gender: 'Male', dept: "EC" },
+        { uid: 1004, unm: 'Kaif', age: 43, gender: 'Male', dept: "CSE" },
+        { uid: 1005, unm: 'Robin', age: 43, gender: 'Male', dept: "AIML" },
+      ]
+
+      
+      function fetchData(userId, fn) {
+        console.log(`Fetching Data for User ID ${userId} `); // user id ke liye data check krege
+
+        setTimeout(() => {  // 2 sec baad result
+          // check user is present or not
+          let user = userData.find((user) => {
+            if (user.uid == userId)
+              return true
+          })
+
+          if (user) {  // agar user h
+            console.log("User Data : ", user);
+            if (fn)  // agar koi callback hell ka function aur hai to use bhi call krdo
+              fn()
+          }
+          else
+            console.log("User Not Found...");
+
+        }, 2000)
+      }
+        
+
+      // Callback Hell
+      fetchData(1001, () => {
+        fetchData(1002, () => {
+          fetchData(1003, () => {
+            fetchData(1005)
+          })
+        })
+      })
+
+
+    /*
+    callback hell -  multiple nesting of the functions ( function ke ander function )
+
+    disadv of callback hell - deep nesting of callbacks making it hard to read and maintain.
+
+    sol of callback hell  -  switch to Promises or async/await.
+
+    */
+
+    </script>
+  </head>
+
+  <body>
+
+
+
+  </body>
+
+</html>

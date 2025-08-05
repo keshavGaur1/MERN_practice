@@ -21,3 +21,8 @@ convertData_intoTable2.html  // table ke kisi column per click kro to table uske
 convertData_intoTable3.html  // table mai kisi column per - 1 baar click - ascending order mai sort 
                                                             2 baar click - descending order mai sort
 
+selectElements.js // for notes
+checkBoxCheckUncheck.html
+
+
+

@@ -1,0 +1,11 @@
+
+intro.txt
+
+index.js
+
+// MVC architecture - Model–View–Controller
+
+routes folder - adminRoute.js userRoute.js   // /user se request aye to userRoute.js , /admin se request aye to adminRoute.js
+controllers folder - admin.controller.js user.controller.js   // user aur admin routes ki request handle krne ke liye 
+                                                                 ( using controllers or requestHandlers )
+

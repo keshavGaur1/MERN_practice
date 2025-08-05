@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/70d41d62a4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script></script>
+  </head>
+  <body>
+
+    <button id="myBtn">Button</button> 
+
+    <input type="radio" name="gender" value="Male"> Male 
+    <input type="radio" name="gender" value="Female"> Female <br>
+
+
+    <hr>
+
+    <input type="checkbox" name="hobbies" value="swimming">swimming 
+    <input type="checkbox" name="hobbies" value="reading">reading 
+    <input type="checkbox" name="hobbies" value="dancing">dancing 
+    <input type="checkbox" name="hobbies" value="sleeping">sleeping 
+
+    <button id="myBtn2">Button 2</button> <br> <br>
+
+    <button id="myBtn3"> Toggle all </button> 
+
+
+
+    
+    <script>
+
+        const btn = document.getElementById("myBtn");
+        btn.addEventListener('click' , () => {
+          
+          const radioList = document.getElementsByName('gender');
+          console.log(radioList);
+
+          radioList.forEach( (radio) => {
+            // console.log(radio.value);
+            // console.log(radio.checked);
+            
+            if( radio.checked ) console.log(radio.value);
+          })
+          
+          
+        })
+
+        const btn2 = document.getElementById("myBtn2");
+        btn2.addEventListener('click' , () => {
+          const checkBoxList = document.getElementsByName('hobbies')
+          
+          checkBoxList.forEach( (checkBox) => {
+            if( checkBox.checked ) console.log(checkBox.value);
+          })
+        })
+
+        let isChecked = false ;
+        const btn3 = document.getElementById("myBtn3");
+        btn3.addEventListener('click' , () => {
+
+          const checkBoxList = document.getElementsByName('hobbies');
+
+          if( isChecked){
+              checkBoxList.forEach( (checkBox) => {
+                checkBox.checked = false ;
+              })
+          }
+          else {
+              checkBoxList.forEach( (checkBox) => {
+                checkBox.checked = true ;
+              })
+          }
+          
+          isChecked = !isChecked ;
+
+          /*
+          checkBoxList.forEach( (checkBox) => {
+            checkBox.checked = !checkBox.checked ;
+          })
+          */
+        })
+
+    </script>
+  </body>
+</html>
