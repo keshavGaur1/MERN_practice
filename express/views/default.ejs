@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 > Application default page </h1>
+    <h2> Welcome <%= name %> </h2>
+    <h2> Welcome <%- name %> </h2>
+
+    
+    <!-- 
+    <%= msg %>  // <font size='4' face='chiller'> HELLO </font>
+    <%- msg %>  // HELLO
+    <% msg %>  // empty
+    -->
+
+    <!-- -------------------------------------------------------------------------------------------------------- -->
+    <!-- conditional rendering ( basis of isValid ) -->
+    <% if(isValid) { %>
+        
+            <h4>
+                welcome at conditional rendering <%= name %>
+            </h4>
+            <p style="background-color: aqua;" >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dolores fugiat iusto nobis quisquam consequatur vero!
+            </p>
+
+    <% }  else { %>
+
+            <h4>
+                welcome at conditional rendering <%= name %>
+            </h4>
+            <p style="background-color: lightgreen;" >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dolores fugiat iusto nobis quisquam consequatur vero!
+            </p>
+
+    <% } %>
+
+    
+    <!-- -------------------------------------------------------------------------------------------------------- -->
+
+
+    
+</body>
+</html>

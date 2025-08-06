@@ -57,4 +57,10 @@ in package.json , add a script -
 run the script using -  npm run keshav 
 
 
+h) npm i ejs --save - embed JavaScript code directly into your HTML — so your server can render HTML pages dynamically based on data.
+
+
 // -----------------------------------------------------------------------------------------------------------------------------------
+
+partial - wo code jo complete nhi hai , hme aage jake alag alag file mai use krke use apni requirement ke hisaab se complete krege
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="myLink" href="https://openai.com" target="_blank">Click Me</a>
+
+
+    <!-- we can create our own attribute of any name  -->
+    <h2 keshav="smart"> This is heading h2 size</h2>
+
+    <script>
+        const link = document.getElementById('myLink');
+
+        const href = link.getAttribute('href')   
+        const target = link.getAttribute('target')
+
+        console.log(href);  // https://openai.com  
+        console.log(target);  // _blank
+
+
+        // -----------------------------------------------------------------------------------------------------
+
+        link.setAttribute("title", "Go to ChatGPT");
+
+        console.log(link);  
+        
+
+        // -----------------------------------------------------------------------------------------------------
+
+        // select custom attribute 
+
+        const element = document.querySelector('[keshav]')
+        
+        console.log(element); // <h2 keshav="smart"> This is heading h2 size</h2>
+
+        
+        
+        /*
+
+        getAttribute - html tag ke element ki value access krne ke liye 
+
+        sets or updates the value of an attribute on an HTML element. If it doesn’t exist, it creates it
+        
+        */
+
+    </script>
+</body>
+</html>

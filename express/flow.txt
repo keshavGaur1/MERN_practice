@@ -9,3 +9,9 @@ routes folder - adminRoute.js userRoute.js   // /user se request aye to userRout
 controllers folder - admin.controller.js user.controller.js   // user aur admin routes ki request handle krne ke liye 
                                                                  ( using controllers or requestHandlers )
 
+
+adminRoute , admin.controller.js - // dynamic url (using : )
+
+
+ejs.txt 
+

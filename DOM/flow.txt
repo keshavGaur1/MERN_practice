@@ -24,5 +24,9 @@ convertData_intoTable3.html  // table mai kisi column per - 1 baar click - ascen
 selectElements.js // for notes
 checkBoxCheckUncheck.html
 
+getSetAttribute.html   // getAttribute setAttribute
+
+
+
 
 
