@@ -15,3 +15,6 @@ adminRoute , admin.controller.js - // dynamic url (using : )
 
 ejs.txt 
 
+dbConn.js
+models
+

@@ -1,0 +1,89 @@
+middleware - req ,res lifecycle ke bich mai kaam karta hai.
+
+jab req aati hai to use phele middleware uss req ko execute krta hai.
+middleware req object ko change/manipulate karta hai .
+
+iske baad - 2 option
+1) uske baad req ko aage handler ko bhej deta hai / forward kar deta hai. aage processing krke res send krne ke liye .
+2) req ko manipulate karke waps whi se response send kar sakta . ( bina handler ko forward kre  )
+
+
+types of middlewares -
+a) built-in middleware
+b) user-defined middleware
+
+how to create user-defined middleware -  by app.use()
+
+middleware has 3 arguments - (req,res,next)
+
+user defined middleware - 
+app.use((req,res,next) => {
+    console.log("Middleware 1");
+    next();  // req aage send krne ke liye
+})
+
+
+note - as we know - jab req aati hai to use phele middleware uss req ko execute krta hai.
+       ( agar 2 middlewares hai to  -  jo middleware1 phele likha h wo execute hoga fir jo middleware2 uske piche likha hoga wo execute hoga )
+       matlab middleware jis sequence mai likhe hai usi mai execute hoge
+
+// --------------------------------------------------------------------------------------------------
+
+next() - isse middleware ka flow direct next middleware or handler per chala jayega
+
+agar next() ke niche kuch likha h to wo execute nhi hoga kyoki next ne flow next middleware or handler per transfer kr diya hai
+
+app.use((req,res,next) => {
+    console.log("Middleware 1");
+    next();  
+})
+
+output - Middleware 1
+
+
+app.use((req,res,next) => {
+    next();         // next() ne flow transfer kr diya
+    console.log("Middleware 1"); 
+})
+
+output - 
+blank 
+
+
+// --------------------------------------------------------------------------------------------------
+
+
+note - by default middleware har request ke liye execute hota ( ise application level middleware khaege)
+
+per ham log kewal specific request ke liye bhi middleware bna sakte
+
+create middleware for specific routes - arguments se phele routes dedo
+
+app.use('/home' , (req,res,next) => {  // middleware for '/home' route
+    console.log("Middleware Home");
+    next();
+}) 
+
+
+// --------------------------------------------------------------------------------------------------
+
+1) index.js mai - application level middleware
+2) route.js mai - router ki help se - route level middleware
+
+
+// --------------------------------------------------------------------------------------------------
+
+Error Handling Middlewares  - to handle errors - application per aaye ya route per aaye
+
+how to identify Error Handling Middlewares - isme 4 arguments hone chiye ( necessary  
+
+(err,req,res,next) ) -  Error Handling Middlewares 
+(err,req,res) ) -  Not An Error Handling Middlewares 
+
+
+// --------------------------------------------------------------------------------------------------
+
+
+
+
+

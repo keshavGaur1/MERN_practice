@@ -38,3 +38,7 @@ but - adminDefault.ejs ka head section partial/header.ejs mai hai to waha jake h
 
 <!-- adding stylesheet that are present in public folder -->
     <link rel="stylesheet" href="stylesheets/style1.css">
+
+
+// ----------------------------------------------------------------------------------------------------------------------
+

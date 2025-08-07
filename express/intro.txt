@@ -59,6 +59,12 @@ run the script using -  npm run keshav
 
 h) npm i ejs --save - embed JavaScript code directly into your HTML — so your server can render HTML pages dynamically based on data.
 
+i) npm i express-formidable -save    // to download express-formidable
+
+j) npm i mongoose -save     // module to create models 
+
+why we use modules - to establish communication between database and application
+(we need HOST of application for connection)
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 

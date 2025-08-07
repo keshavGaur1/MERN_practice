@@ -1,6 +1,9 @@
 const express = require("express")  // ye bhi internally http module hi use krta hai 
 const app = express()   // app is an instance of an Express application
 
+const formidable = require('express-formidable') // form data ko handle krne ke liye
+const db = require('./dbConn')
+
 const HOST = 'localhost'    // 127.0.0.1
 const PORT = 9000
 
@@ -49,6 +52,14 @@ app.use(express.static('public'))
 
 app.set('view engine' , 'ejs')
 
+// static-public resources kaha h use batayega - public folder ke ander (images,css,javascripts)
+app.use(express.static('public'))
+
+// formidable ko config kara
+app.use(formidable())
+
+
+
 let name = 'keshavvv'
 let msg = "<font size='4' face='chiller'> HELLO </font>" 
 
@@ -62,8 +73,6 @@ app.get('/' , (req,res) => {
     // name variable ko as a data {} ke ander bhejege {name}   ( hmesha json or object format mai )
 })
 
-// static-public resources kaha h use batayega - public folder ke ander (images,css,javascripts)
-app.use(express.static('public'))
 
 
 
