@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()   // ab sare routes router se likhe jayege
 
 // importing controllers
-const {adminDefault , adminHome , getAdminPage , addUser , showUser} = require('../controllers/admin.controller')
+const {adminDefault , adminHome , getAdminPage , addUser , showUser , editUser , deleteUser} = require('../controllers/admin.controller')
 
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -26,6 +26,17 @@ router.post('/addUser' , addUser )
 // localhost://9000/admin/showUser
 router.get('/showUser' , showUser )
 
+
+// localhost://8000/admin/editUser - :id dynamic url hai jo 
+router.get('/editUser/:id' , editUser )
+
+// localhost://8000/admin/editUser - 
+router.post('/editUser/:id' , editUser )
+
+
+
+// localhost://8000/admin/deleteUser - :id dynamic url hai jo id ke basis per element delete krega
+router.get('/deleteUser/:id' , deleteUser )
 
 
 // dynamic url 

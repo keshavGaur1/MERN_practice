@@ -16,6 +16,8 @@
                 <th>Role </th>
                 <th>Active </th>
                 <th>Date of reg </th>
+                <th>Edit </th>
+                <th>Delete </th>
             </tr>
         </thead>
         <tbody>
@@ -26,12 +28,17 @@
                     <td> <%= user.emailId %> </td>
                     <td> <%= user.hasRole %> </td>
                     <td> <%= user.isActive %> </td>
-                    <td> <%= user.createdAt %> </td>
+                    <td> <%= new Date(user.createdAt).toLocaleString() %> </td>
+                    <td>
+                        <a href="/admin/editUser/<%= user._id %>" class="btn btn-sm btn-primary">Edit</a>   <!-- <%= user._id %> se jo individual user hoga , uski _id edit ke url mai concate ho jayegi  -->
+                    </td>
+                    <td>
+                        <a href="/admin/deleteUser/<%= user._id %>" class="btn btn-sm btn-danger">Delete</a>   <!-- <%= user._id %> se jo individual user hoga , uski _id edit ke url mai concate ho jayegi  -->
+                    </td>
                 </tr>
             <% } ) %>
         </tbody>
     </table>
-
 
 
     

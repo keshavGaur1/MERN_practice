@@ -71,23 +71,49 @@ const addUser = async function (req,res)  {
 
 // console.log("req filed ");
 
+// to show all users
 const showUser = async function(req,res) {  
 
-
-
-
-
-
-  
 
   const userData = await UserModel.find();
   // console.log(userData);  database se sare users ki info aarhi
   res.render('adminViews/showUsers' , {userData} )
 
+}
+
+
+
+const editUser = async function(req,res) {  
+
+  if( req.method === 'POST'){
+    const updatedUser = await UserModel.findByIdAndUpdate(req.params.id , { password: req.fields.pwd , emailId:req.fields.mailId }, {new:true} )
+    // new:true se user ka data update hone ke baad return ho jayega
+
+    if(updatedUser){
+      res.render('adminViews/editUser' , { userData : updatedUser , msg:"User updated successfully "} )
+    }
+  }
+  else {
+
+  const userData = await UserModel.findOne({ _id : req.params.id });
+  // console.log(userData);
+
+  res.render('adminViews/editUser' , {userData , msg:null} )
+  }
 
 }
 
 
+
+const deleteUser = async function ( req,res){
+  const deletedUser = await UserModel.findByIdAndDelete(req.params.id);
+
+  if( deleteUser ){
+    res.redirect('/admin/showUser')  // redirect mai hmesha wo route dege jaha re-direct krna hai , isme page nhi dege kyoki yaha render nhi kra rhe h
+  }
+}
+
+
 // -------------------------------------------------------------------------------------------
-module.exports = { adminDefault, adminHome, getAdminPage , addUser , showUser};
+module.exports = { adminDefault, adminHome, getAdminPage , addUser , showUser , editUser , deleteUser};
 // object export kra jisse import krte time isi naam se function ko use kr paye ( for better understanding )
