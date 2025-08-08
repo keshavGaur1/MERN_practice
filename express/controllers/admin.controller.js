@@ -37,6 +37,8 @@ const getAdminPage = (req, res) => {
 
 // -------------------------------------------------------------------------------------------
 
+// store user in database 
+
 // localhost:9000/admin/addUser , method=get 
 const addUser = async function (req,res)  {
 
@@ -45,26 +47,47 @@ const addUser = async function (req,res)  {
 
     // creating new user
     const newUser = new UserModel({
+      //  keys - userName,password,emailId - schema se aarha h
+      //   values - req.fields ki value form se aarhi hai
       userName : req.fields.unm ,
       password : req.fields.pwd ,
       emailId : req.fields.mailId
     })
 
     let user = await newUser.save()  // database mai data ko save krne ke liye 
-    console.log(user);
-    
+    // console.log(user);
+
+    if( user ) {
+      res.render('adminViews/addUser' , { msg:"Record added sucessfully" } )
+    }  
+  }
+  else{  // req.method is not POST
+    res.render('adminViews/addUser' , { msg:null } )
   }
 
- res.render('adminViews/addUser')
 }
 
 
 
 // console.log("req filed ");
 
+const showUser = async function(req,res) {  
 
+
+
+
+
+
+  
+
+  const userData = await UserModel.find();
+  // console.log(userData);  database se sare users ki info aarhi
+  res.render('adminViews/showUsers' , {userData} )
+
+
+}
 
 
 // -------------------------------------------------------------------------------------------
-module.exports = { adminDefault, adminHome, getAdminPage , addUser };
+module.exports = { adminDefault, adminHome, getAdminPage , addUser , showUser};
 // object export kra jisse import krte time isi naam se function ko use kr paye ( for better understanding )

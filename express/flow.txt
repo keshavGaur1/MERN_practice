@@ -17,4 +17,6 @@ ejs.txt
 
 dbConn.js
 models
+creating new user in admin controller
+showUsers.ejs and showUser route 
 

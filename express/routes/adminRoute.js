@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()   // ab sare routes router se likhe jayege
 
 // importing controllers
-const {adminDefault , adminHome , getAdminPage , addUser } = require('../controllers/admin.controller')
+const {adminDefault , adminHome , getAdminPage , addUser , showUser} = require('../controllers/admin.controller')
 
 
 // -------------------------------------------------------------------------------------------------------------------
@@ -19,8 +19,14 @@ router.get('/home', adminHome)
 router.get('/addUser' , addUser )
 
 
-// for post request -- localhost://8000/admin/addUser
+// for post request -- localhost://9000/admin/addUser
 router.post('/addUser' , addUser )
+
+
+// localhost://9000/admin/showUser
+router.get('/showUser' , showUser )
+
+
 
 // dynamic url 
 // :adminName mai - : ki wajh se koi bhi naam ho sakta aur iski naam ki value ko req.params.adminName variable se hi access karege
