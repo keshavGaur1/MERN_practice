@@ -1,0 +1,35 @@
+library - flexible hoti according to the need of developer 
+framework - ye cheezo ko force krta ki hme yhi rules follow krne hai
+
+react - library used to design single page application
+
+page ko pheli baar load krne mai , page ko render kra jata hai.
+
+react mai page ko re-render nhi kra jata hai
+
+disadv of re-rendering - har chote change ke baad mai sara page re-render hoyege to har bar browser ko pura pura DOM create krna pdega ( isse performance bekar ho jayegi)
+
+react allows to create re-usable componants.
+
+react mai page ek hi hota hai , per componants ke combination se multiple views bnata hai
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+react uses virtual DOM -
+
+jo real DOM hota react uski ek copy bna leta hai , jise virtual DOM kehte hai.
+Ab wo real DOM mai hone wale change ko phele virtual DOM mai change krta
+uske baad actual DOM and virtual DOM se compare krega.
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+--open - isse direct browser per open ho jayega
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+types of componants - functional componants , class componants
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+

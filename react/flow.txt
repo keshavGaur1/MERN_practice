@@ -1,0 +1,14 @@
+intro.txt
+
+// functional componants
+Comp1.jsx
+Comp2.jsx
+
+Comp3.jsx  // class componants
+Comp4.jsx  // access variables using {}
+Comp5.jsx  // css inside jsx file
+Comp6.jsx  // how to add bootstrap classes
+
+Comp7.jsx  // conditional rendering + nested componants
+Comp8.jsx  // conditional rendering
+
