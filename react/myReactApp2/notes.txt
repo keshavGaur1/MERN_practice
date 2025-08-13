@@ -1,0 +1,109 @@
+//--------------------------------------------------------------------------------------------------------------------------------
+to create routes - npm i react-router-dom
+
+routes defined krne ka structure -
+
+routes ke ander sare route , route ke ander specific route ka path aur element
+
+
+    <Routes>
+
+      <Route path='/' element={<Home />} / >
+      <Route path='/about' element={<About />} / >
+
+    </Routes>
+
+note - kewal itna krne se routes nhi chlega 
+
+iske liye hme main.jsx mai <app /> import ko <BrowserRouter> </BrowserRouter> ke ander wrap krna hoga
+
+
+main.jsx mai -
+
+createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <StrictMode>
+      <App />
+    </StrictMode>
+  </BrowserRouter>
+)
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+routes ki link kaise lagayege ???  using Link to='/' isme hi route dedo
+
+{/* <a href="/about">about</a> */}  
+{/* isse page reload hoga */}
+
+sol - <Link to='/about'> About Us </Link>
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+{/* How to add parent and child route */}
+
+    // parent route start
+      <Route path='/dash' element={<Dashboard />}  >  
+      
+        <Route path='home' element={<Home />}  />
+        <Route path='about' element={<About />}  />
+        <Route path='add' element={<AddUser />}  />
+        <Route path='view' element={<ViewUser />}  />
+
+      </Route> 
+    // parent route end
+
+Dashboard jo parent componant hai , usme <Outlet /> ko call krna pdega . jaha Outlet ko call krege usi ki jagah child componant aayega
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+code se dusre url per navigate krne ke liye -- 
+
+const navigate = useNavigate()
+
+function loginfn() {
+    navigate('/dash')
+}
+
+  
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+how to create dynamic routes
+
+{/* Dynamic route */}
+<Route path='/dynamic/:nm' element={ <DynamicRoute/> }></Route>
+
+
+how to read value of dynamic route - 
+
+const name = useParams()
+console.log(name.nm);
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+useState []
+return an array
+
+1st value - initial value of state
+2nd value - ek function - jo state ki value ko change krega
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+npm i axios - api calling ke liye 
+const res =  await axios.post("http://localhost:9000/admin/addUser",formData)
+        
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+useEffect hook - 
+
+jab kisi bhi state mai change hota hai to sara componant dubara render hota hai. aur useEffect har baar call hota.
+per isse performance bhut kharab hogi .
+
+why ?? 
+ek page mai 10 state use kri hai per . har baar kisi bhi 1 state change

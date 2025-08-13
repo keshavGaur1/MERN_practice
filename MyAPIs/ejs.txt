@@ -1,0 +1,44 @@
+npm i ejs --save - embed JavaScript code directly into your HTML — so your server can render HTML pages dynamically based on data.
+
+
+a) install ejs 
+b) create views folder in backend folder
+c) make file.ejs inside views folder
+d) set view engine in index.js -
+app.set('view engine' , 'ejs')
+
+e) instead of send inside route - use render to add ejs folder
+
+app.get('/' , (req,res) => {
+    res.render('default')
+})
+
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+how to add images/css/javascripts  in express project
+
+
+a) create "public" folder inside backend folder
+b) create "images" folder inside "public"
+c) write below line in index.js
+    app.use(express.static('public))
+
+ab jaha bhi image add krni hai waha - <img src="images/meet.png" width="80px" />  
+note - public folder tk apne aap include rehta hai path mai .  uske aake ka path dena padta hai
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+adding css in ejs page ( adminDefault.ejs )
+
+a) create css file (for ex- style1.css) inside public/stylesheets
+b) adminDefault.ejs mai - add the above css file in the head section 
+
+but - adminDefault.ejs ka head section partial/header.ejs mai hai to waha jake head folder mai 
+
+<!-- adding stylesheet that are present in public folder -->
+    <link rel="stylesheet" href="stylesheets/style1.css">
+
+
+// ----------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,44 @@
+
+<%- include('./partials/header.ejs') %>
+
+<%- include('./nav.ejs') %>
+
+<!-- section ek part ke liye (ek part ki designing ke liye) -->
+<section>
+
+<form method="post">
+<table class="table table-bordered w-50 mx-auto table-secondary text-center mt-3">
+    <thead>
+        <tr>
+            <td colspan="2">Edit user </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>User Name </td> <td> <input type="text" name="unm" value="<%= userData.userName %>" readonly /> </td>  
+            <!-- value jo hai wo initially show hoti h input box mai - to use database se laake yaha show kr rhe with the help of userData object . ab database mai store value yha show hogi    -->
+        </tr>
+        <tr>
+            <td>Password </td> <td> <input type="text" name="pwd" value="<%= userData.password %>" /> </td>
+        </tr>
+        <tr>
+            <td>Email </td> <td> <input type="email" name="mailId" value="<%= userData.emailId %>" /> </td>
+        </tr>
+        
+        
+        <tr>
+            <td colspan="2"> <input type="submit" value="update" name="updateBtn" class="btn btn-primary" /> </td>
+        </tr>
+    </tbody>
+</table>
+</form>
+
+<% if(msg) { %>
+<p class="alert alert-success w-50 mx-auto"> <%= msg %> </p>
+<% } %>
+
+</section>
+
+
+<%- include('./partials/footer.ejs') %>

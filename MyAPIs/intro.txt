@@ -1,0 +1,72 @@
+
+a) npm init - used for file configuration
+
+ye puchega -
+    package name :
+    version :       ( version production mai changes ko represent krta hai )
+    description : 
+    entry point :              ( index.js by default)
+    test command :
+    git repository :
+    keywords : node express        ( used for browser )
+    author :
+    license : (ISC)
+    type : (commonjs)
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+npm init -y    - isse ek baar mai puri configuration file ban jati ( bina koi details puche )
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+a) download express
+npm install express   ||    npm i express
+npm install express -save   // use to save dependecy in package.json ( agar by default nhi horhi)
+
+b) delete a module -
+npm uninstall express
+
+c) npm i packageName -g     // -g used for global installation
+npm i express -g
+
+d) npm list     // sare package batata hai jo install h project mai ( matlab dependecies )
+npm list -g     // global environment mai jitne bhi package hote wo dikhate 
+
+// server bar bar manually re-start na krna pde har changes ke baad
+
+e) npm i nodemon -save-dev          // -dev -> dev dependecy jo kewal development ke time per use hoti 
+                                    // -save -> use to save dependecy in package.json
+
+nodemon index.js    // run server using nodemon
+
+
+f) run the express backend using script -  ( jisse koi confusion na ho )
+
+in package.json , add a script - 
+"start"  : "nodemon index.js"
+
+run the script using -  npm start
+
+note - ye start ek pre-defined name hai script ka . isliye kewal npm start se ye execute hogya
+
+g) how to run custom script ( jise khud se new name diya )
+
+in package.json , add a script - 
+"keshav"  : "nodemon index.js"
+
+run the script using -  npm run keshav 
+
+
+h) npm i ejs --save - embed JavaScript code directly into your HTML — so your server can render HTML pages dynamically based on data.
+
+i) npm i express-formidable -save    // to download express-formidable
+
+j) npm i mongoose -save     // module to create models 
+
+why we use modules - to establish communication between database and application
+(we need HOST of application for connection)
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+partial - wo code jo complete nhi hai , hme aage jake alag alag file mai use krke use apni requirement ke hisaab se complete krege
+

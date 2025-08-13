@@ -12,7 +12,9 @@ import Comp5 from './Comp5'
 import Comp6 from './Comp6'
 import Comp7 from './Comp7'
 import Comp8 from './Comp8'
+import Comp9 from './Comp9'
 
+import Comp10 from './Comp10'
 
 function App() {
   
@@ -27,8 +29,12 @@ function App() {
     {/* <Comp5/> */}
     {/* <Comp6 /> */}
 
-    <Comp7 />
-    <Comp8 />
+    {/* <Comp7 /> */}
+    {/* <Comp8 /> */}
+
+    {/* <Comp9 /> */}
+    
+    <Comp10 />
       
     </>
   )

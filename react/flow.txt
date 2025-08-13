@@ -1,3 +1,6 @@
+//----------------------------------------------------------------------------------------------------------------------
+myReactApp
+
 intro.txt
 
 // functional componants
@@ -12,3 +15,12 @@ Comp6.jsx  // how to add bootstrap classes
 Comp7.jsx  // conditional rendering + nested componants
 Comp8.jsx  // conditional rendering
 
+Comp9.jsx  // use of map ( not use forEach)
+Comp10.jsx // event handling and functions calling
+
+
+//----------------------------------------------------------------------------------------------------------------------
+myReactApp2
+
+pages folder - isme application ke views hote hai ( view matlab ek pura page jo bhut sare componants se mila ke bana hoga)
+componants folder - isme reuseable componants hoge
